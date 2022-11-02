@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MisTareas2</string>
+    <string name="boton_hechas">Hechas</string>
+    <string name="boton_pendientes">Pendientes</string>
 </resources>
