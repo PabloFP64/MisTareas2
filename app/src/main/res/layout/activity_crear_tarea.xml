@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".CrearTarea">
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutTexto"
+        android:layout_width="397dp"
+        android:layout_height="482dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/LinearLayoutBotones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutTextoH"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/Texto_Coste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/coste"
+                android:inputType="textLongMessage"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="299dp" />
+
+            <EditText
+                android:id="@+id/Texto_Nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/nombre"
+                android:inputType="textLongMessage"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="84dp" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutTextoV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <EditText
+                    android:id="@+id/Texto_Fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/fecha"
+                    android:inputType="textLongMessage"
+                    tools:layout_editor_absoluteX="69dp"
+                    tools:layout_editor_absoluteY="231dp" />
+
+                <EditText
+                    android:id="@+id/Texto_Prioridad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/prioridad"
+                    android:inputType="textLongMessage"
+                    tools:layout_editor_absoluteX="230dp"
+                    tools:layout_editor_absoluteY="233dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/Texto_Descrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/descripci_n"
+                android:inputType="textLongMessage"
+                app:layout_constraintTop_toBottomOf="@+id/Texto_Nombre"
+                tools:layout_editor_absoluteX="71dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutBotones"
+        android:layout_width="375dp"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="164dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayoutTexto">
+
+        <Button
+            android:id="@+id/boton_pend"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/list_todo"
+            android:layout_marginBottom="536dp"
+            android:layout_weight="1"
+            android:text="@string/boton_pendientes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/boton_hecho" />
+
+        <Button
+            android:id="@+id/boton_hecho"
+            android:layout_width="142dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/list_todo"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="536dp"
+            android:layout_weight="1"
+            android:text="@string/boton_hechas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

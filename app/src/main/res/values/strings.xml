@@ -2,4 +2,9 @@
     <string name="app_name">MisTareas2</string>
     <string name="boton_hechas">Hechas</string>
     <string name="boton_pendientes">Pendientes</string>
+    <string name="nombre">Nombre</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="fecha">Fecha</string>
+    <string name="prioridad">Prioridad</string>
+    <string name="coste">Coste</string>
 </resources>
