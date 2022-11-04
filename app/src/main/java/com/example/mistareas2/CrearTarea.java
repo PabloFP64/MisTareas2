@@ -19,7 +19,7 @@ import com.example.mistareas2.task_database.TaskDatabaseHelper;
 import java.util.ArrayList;
 
 public class CrearTarea extends AppCompatActivity {
-    public static final String EXTRA_REPLY ="com.example.android.mistareas2.extra.MESSAGE";
+    public static final String EXTRA_REPLY ="com.example.android.mistareas2.extra.REPLY";
     private EditText mNombre;
     private EditText mReply;
 
@@ -32,64 +32,25 @@ public class CrearTarea extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_tarea);
+
         mNombre = findViewById(R.id.Texto_Nombre);
-        Intent intent = getIntent();
 
 
-
-//        String task = String.valueOf(mReply.getText());
-//        SQLiteDatabase db = taskHelper.getWritableDatabase();
-//        ContentValues values = new ContentValues();
-//        values.put(TaskContract.TaskEntry.COL_TASK_TITLE, task);
-//        db.insertWithOnConflict(TaskContract.TaskEntry.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
-//        db.close();
-//        updateUI();
 
 
     }
 
     public void launchTareaCreada(View view) {
+
+        Intent intent = new Intent(this, MainActivity.class);
         String nombre = mNombre.getText().toString();
-        Intent replyIntent = new Intent();
-        setResult(RESULT_OK,replyIntent);
-        finish();
+        intent.putExtra(EXTRA_REPLY, nombre);
+        //setResult(RESULT_OK,intent);
+        startActivity(intent);
 
 
 
     }
-//
-//    public void returnReply(View view) {
-//        String reply = mReply.getText().toString();
-//        Intent replyIntent = new Intent();
-//        replyIntent.putExtra(EXTRA_MESSAGE, reply);
-//        setResult(RESULT_OK,replyIntent);
-//        finish();
-//
-//
-//    }
-//
-//    private void updateUI() {
-//        ArrayList<String> taskList = new ArrayList<>();
-//        SQLiteDatabase db = taskHelper.getReadableDatabase();
-//        Cursor cursor = db.query(TaskContract.TaskEntry.TABLE,
-//                new String[]{TaskContract.TaskEntry._ID, TaskContract.TaskEntry.COL_TASK_TITLE},
-//                null, null, null, null, null);
-//        while (cursor.moveToNext()) {
-//            int idx = cursor.getColumnIndex(TaskContract.TaskEntry.COL_TASK_TITLE);
-//            taskList.add(cursor.getString(idx));
-//        }
-//
-//        if (arrAdapter == null) {
-//            arrAdapter = new ArrayAdapter<>(this, R.layout.todo_task, R.id.title_task, taskList);
-//            TaskList.setAdapter(arrAdapter);
-//        } else {
-//            arrAdapter.clear();
-//            arrAdapter.addAll(taskList);
-//            arrAdapter.notifyDataSetChanged();
-//        }
-//
-//        cursor.close();
-//        db.close();
-//    }
+
 
 }

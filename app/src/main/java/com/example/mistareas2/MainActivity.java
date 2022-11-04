@@ -24,17 +24,26 @@ public class MainActivity extends AppCompatActivity {
     private ListView TaskList;
     private ArrayAdapter<String> arrAdapter;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY);
+        TextView textView = findViewById(R.id.CogidaTarea);
+        textView.setText(nombre);
+
 
         taskHelper = new TaskDatabaseHelper(this);
         TaskList = (ListView) findViewById(R.id.list_todo);
 
         updateUI();
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -60,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         updateUI();
     }
 
-    private void updateUI() {
+    public void updateUI() {
         ArrayList<String> taskList = new ArrayList<>();
         SQLiteDatabase db = taskHelper.getReadableDatabase();
         Cursor cursor = db.query(TaskContract.TaskEntry.TABLE,
