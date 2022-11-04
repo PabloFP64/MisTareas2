@@ -120,7 +120,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            android:onClick="returnReply"
+            android:onClick="launchTareaCreada"
             app:layout_constraintStart_toEndOf="@+id/boton_cancelar" />
 
         <Button
@@ -131,6 +131,7 @@
             android:layout_marginBottom="536dp"
             android:layout_weight="1"
             android:text="@string/cancelar"
+            android:onClick="Cancelar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
