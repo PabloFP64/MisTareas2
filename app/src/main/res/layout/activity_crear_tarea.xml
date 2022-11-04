@@ -25,6 +25,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
             <EditText
+                android:id="@+id/Texto_Nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/nombre"
+                android:inputType="textLongMessage"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="84dp"
+                android:autofillHints="" />
+            <EditText
                 android:id="@+id/Texto_Coste"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,17 +44,6 @@
                 tools:layout_editor_absoluteX="53dp"
                 tools:layout_editor_absoluteY="299dp"
                 tools:ignore="NestedWeights"
-                android:autofillHints="" />
-
-            <EditText
-                android:id="@+id/Texto_Nombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/nombre"
-                android:inputType="textLongMessage"
-                tools:layout_editor_absoluteX="71dp"
-                tools:layout_editor_absoluteY="84dp"
                 android:autofillHints="" />
 
             <LinearLayout
@@ -121,6 +120,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
+            android:onClick="returnReply"
             app:layout_constraintStart_toEndOf="@+id/boton_cancelar" />
 
         <Button

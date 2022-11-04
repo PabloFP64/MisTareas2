@@ -41,39 +41,14 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    //Menu popup (crear tarea)
+    //Boton menu crear tarea
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = new Intent(this, CrearTarea.class);
         startActivity(intent);
         return true;
     }
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.action_add_task:
-//                final EditText taskEdit = new EditText(this);
-//                AlertDialog dialog = new AlertDialog.Builder(this)
-//                        .setTitle("Add a new task").setMessage("What do you want to do next?").setView(taskEdit)
-//                        .setPositiveButton("Add", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                String task = String.valueOf(taskEdit.getText());
-//                                SQLiteDatabase db = taskHelper.getWritableDatabase();
-//                                ContentValues values = new ContentValues();
-//                                values.put(TaskContract.TaskEntry.COL_TASK_TITLE, task);
-//                                db.insertWithOnConflict(TaskContract.TaskEntry.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
-//                                db.close();
-//                                updateUI();
-//                            }
-//                        })
-//                        .setNegativeButton("Cancel", null).create();
-//                dialog.show();
-//                return true;
-//
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
+
     //Tarea completada
     public void deleteTask(View view) {
         View parent = (View) view.getParent();
