@@ -24,15 +24,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/LinearLayoutTextoH"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="48dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
             <EditText
                 android:id="@+id/Texto_Coste"
                 android:layout_width="match_parent"
@@ -41,7 +32,9 @@
                 android:hint="@string/coste"
                 android:inputType="textLongMessage"
                 tools:layout_editor_absoluteX="53dp"
-                tools:layout_editor_absoluteY="299dp" />
+                tools:layout_editor_absoluteY="299dp"
+                tools:ignore="NestedWeights"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/Texto_Nombre"
@@ -51,13 +44,13 @@
                 android:hint="@string/nombre"
                 android:inputType="textLongMessage"
                 tools:layout_editor_absoluteX="71dp"
-                tools:layout_editor_absoluteY="84dp" />
+                tools:layout_editor_absoluteY="84dp"
+                android:autofillHints="" />
 
             <LinearLayout
                 android:id="@+id/LinearLayoutTextoV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_marginBottom="16dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
@@ -74,15 +67,19 @@
                     android:hint="@string/fecha"
                     android:inputType="textLongMessage"
                     tools:layout_editor_absoluteX="69dp"
-                    tools:layout_editor_absoluteY="231dp" />
+                    tools:layout_editor_absoluteY="231dp"
+                    android:autofillHints=""
+                    tools:ignore="NestedWeights" />
 
                 <EditText
                     android:id="@+id/Texto_Prioridad"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:autofillHints=""
                     android:hint="@string/prioridad"
                     android:inputType="textLongMessage"
+                    android:textColorHint="#757575"
                     tools:layout_editor_absoluteX="230dp"
                     tools:layout_editor_absoluteY="233dp" />
 
@@ -96,10 +93,9 @@
                 android:hint="@string/descripci_n"
                 android:inputType="textLongMessage"
                 app:layout_constraintTop_toBottomOf="@+id/Texto_Nombre"
-                tools:layout_editor_absoluteX="71dp" />
+                tools:layout_editor_absoluteX="71dp"
+                android:autofillHints="" />
         </LinearLayout>
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LinearLayoutBotones"
@@ -119,7 +115,6 @@
             android:id="@+id/boton_pend"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_below="@id/list_todo"
             android:layout_marginBottom="536dp"
             android:layout_weight="1"
             android:text="@string/boton_pendientes"
@@ -132,7 +127,6 @@
             android:id="@+id/boton_hecho"
             android:layout_width="142dp"
             android:layout_height="50dp"
-            android:layout_below="@id/list_todo"
             android:layout_marginStart="60dp"
             android:layout_marginBottom="536dp"
             android:layout_weight="1"
