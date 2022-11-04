@@ -7,4 +7,6 @@
     <string name="fecha">Fecha</string>
     <string name="prioridad">Prioridad</string>
     <string name="coste">Coste</string>
+    <string name="registrar">Registrar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>

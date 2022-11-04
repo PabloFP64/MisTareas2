@@ -112,25 +112,25 @@
         app:layout_constraintTop_toBottomOf="@+id/LinearLayoutTexto">
 
         <Button
-            android:id="@+id/boton_pend"
+            android:id="@+id/boton_registrar"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginBottom="536dp"
             android:layout_weight="1"
-            android:text="@string/boton_pendientes"
+            android:text="@string/registrar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/boton_hecho" />
+            app:layout_constraintStart_toEndOf="@+id/boton_cancelar" />
 
         <Button
-            android:id="@+id/boton_hecho"
+            android:id="@+id/boton_cancelar"
             android:layout_width="142dp"
             android:layout_height="50dp"
             android:layout_marginStart="60dp"
             android:layout_marginBottom="536dp"
             android:layout_weight="1"
-            android:text="@string/boton_hechas"
+            android:text="@string/cancelar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
