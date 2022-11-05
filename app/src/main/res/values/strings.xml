@@ -10,4 +10,7 @@
     <string name="registrar">Registrar</string>
     <string name="cancelar">Cancelar</string>
     <string name="borrar">Borrar</string>
+    <string name="nuevaTarea">Nueva Tarea</string>
+    <string name="ListaDeTareas">Lista de Tareas</string>
+    <string name="add_task">Add Task</string>
 </resources>

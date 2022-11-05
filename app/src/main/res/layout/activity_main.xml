@@ -35,12 +35,13 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/boton_registrar"
+            android:id="@+id/boton_pendientes"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_below="@id/list_todo"
             android:layout_marginBottom="536dp"
             android:layout_weight="1"
+            android:backgroundTint="#0D4853"
             android:text="@string/boton_pendientes"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,13 +49,14 @@
             app:layout_constraintStart_toEndOf="@+id/boton_cancelar" />
 
         <Button
-            android:id="@+id/boton_cancelar"
+            android:id="@+id/boton_hechas"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_below="@id/list_todo"
             android:layout_marginStart="60dp"
             android:layout_marginBottom="536dp"
             android:layout_weight="1"
+            android:backgroundTint="#0D4853"
             android:text="@string/boton_hechas"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
