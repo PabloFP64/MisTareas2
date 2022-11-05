@@ -13,4 +13,11 @@
     <string name="nuevaTarea">Nueva Tarea</string>
     <string name="ListaDeTareas">Lista de Tareas</string>
     <string name="add_task">Add Task</string>
+    <string name="descripci_n_actividad">Descripción_Actividad</string>
+    <string name="fecha_actividad">Fecha_Actividad</string>
+    <string name="urgencia_actividad">Urgencia_Actividad</string>
+    <string name="precio_actividad">Precio_Actividad</string>
+    <string name="volver">Volver</string>
+    <string name="infoTarea">Tarea</string>
+    <string name="nombre_actividad">Nombre_Actividad</string>
 </resources>
