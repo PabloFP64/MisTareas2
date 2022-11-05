@@ -53,4 +53,7 @@ public class CrearTarea extends AppCompatActivity {
     }
 
 
+    public void cancelarTarea(View view) {
+        finish();
+    }
 }
