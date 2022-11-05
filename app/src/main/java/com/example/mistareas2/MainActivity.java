@@ -84,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
         updateUI();
     }
 
+    public void launchInfo(View view) {
+        Intent intent = new Intent(this, InfoTareas.class);
+        startActivity(intent);
+    }
+
     public void updateUI() {
         ArrayList<String> taskList = new ArrayList<>();
         SQLiteDatabase db = taskHelper.getReadableDatabase();
