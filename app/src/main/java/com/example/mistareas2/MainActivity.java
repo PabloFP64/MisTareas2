@@ -2,6 +2,7 @@ package com.example.mistareas2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -35,15 +36,29 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY);
-        TextView textView = findViewById(R.id.CogidaTarea);
-        textView.setText(nombre);
-
 
         taskHelper = new TaskDatabaseHelper(this);
         TaskList = (ListView) findViewById(R.id.list_todo);
 
+        if(nombre!=null){
+            crearTarea();
+        }
+
+    }
+
+    private void crearTarea() {
+        Intent intent = getIntent();
+        String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY);
+
+        SQLiteDatabase db = taskHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(TaskContract.TaskEntry.COL_TASK_TITLE, nombre);
+        db.insertWithOnConflict(TaskContract.TaskEntry.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+        db.close();
         updateUI();
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);

@@ -14,12 +14,12 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/task_delete"
+        android:id="@+id/borrar_tarea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:onClick="deleteTask"
         android:layout_alignParentRight="true"
-        android:text="Task Completed" />
+        android:onClick="deleteTask"
+        android:text="@string/borrar" />
 
 </RelativeLayout>
