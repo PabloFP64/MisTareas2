@@ -24,77 +24,79 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <EditText
+            android:id="@+id/Texto_Nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/nombre"
+            android:inputType="textLongMessage"
+            android:maxLength="12"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="84dp" />
+
+        <EditText
+            android:id="@+id/Texto_Coste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/coste"
+            android:inputType="textLongMessage"
+            tools:ignore="NestedWeights"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="299dp" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutTextoV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="parent">
+
             <EditText
-                android:id="@+id/Texto_Nombre"
+                android:id="@+id/Texto_Fecha"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:hint="@string/nombre"
+                android:autofillHints=""
+                android:hint="@string/fecha"
                 android:inputType="textLongMessage"
-                tools:layout_editor_absoluteX="71dp"
-                tools:layout_editor_absoluteY="84dp"
-                android:autofillHints="" />
-            <EditText
-                android:id="@+id/Texto_Coste"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/coste"
-                android:inputType="textLongMessage"
-                tools:layout_editor_absoluteX="53dp"
-                tools:layout_editor_absoluteY="299dp"
                 tools:ignore="NestedWeights"
-                android:autofillHints="" />
-
-            <LinearLayout
-                android:id="@+id/LinearLayoutTextoV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.555"
-                app:layout_constraintStart_toStartOf="parent">
-
-                <EditText
-                    android:id="@+id/Texto_Fecha"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:hint="@string/fecha"
-                    android:inputType="textLongMessage"
-                    tools:layout_editor_absoluteX="69dp"
-                    tools:layout_editor_absoluteY="231dp"
-                    android:autofillHints=""
-                    tools:ignore="NestedWeights" />
-
-                <EditText
-                    android:id="@+id/Texto_Prioridad"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:autofillHints=""
-                    android:hint="@string/prioridad"
-                    android:inputType="textLongMessage"
-                    android:textColorHint="#757575"
-                    tools:layout_editor_absoluteX="230dp"
-                    tools:layout_editor_absoluteY="233dp" />
-
-            </LinearLayout>
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="231dp" />
 
             <EditText
-                android:id="@+id/Texto_Descrip"
+                android:id="@+id/Texto_Prioridad"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:hint="@string/descripci_n"
+                android:autofillHints=""
+                android:hint="@string/prioridad"
                 android:inputType="textLongMessage"
-                app:layout_constraintTop_toBottomOf="@+id/Texto_Nombre"
-                tools:layout_editor_absoluteX="71dp"
-                android:autofillHints="" />
+                android:textColorHint="#757575"
+                tools:layout_editor_absoluteX="230dp"
+                tools:layout_editor_absoluteY="233dp" />
+
         </LinearLayout>
+
+        <EditText
+            android:id="@+id/Texto_Descrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/descripci_n"
+            android:inputType="textLongMessage"
+            app:layout_constraintTop_toBottomOf="@+id/Texto_Nombre"
+            tools:layout_editor_absoluteX="71dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LinearLayoutBotones"
@@ -116,11 +118,11 @@
             android:layout_height="50dp"
             android:layout_marginBottom="536dp"
             android:layout_weight="1"
+            android:onClick="launchTareaCreada"
             android:text="@string/registrar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            android:onClick="launchTareaCreada"
             app:layout_constraintStart_toEndOf="@+id/boton_cancelar" />
 
         <Button
