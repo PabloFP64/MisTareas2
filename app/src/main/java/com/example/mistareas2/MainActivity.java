@@ -1,6 +1,6 @@
 package com.example.mistareas2;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.example.mistareas2.CrearTarea.EXTRA_REPLY_N;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mistareas2.task_database.TaskContract;
 import com.example.mistareas2.task_database.TaskDatabaseHelper;
@@ -35,11 +36,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent intent = getIntent();
-        String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY_N);
-        String coste = intent.getStringExtra(CrearTarea.EXTRA_REPLY_C);
-        String fecha = intent.getStringExtra(CrearTarea.EXTRA_REPLY_F);
-        String prioridad = intent.getStringExtra(CrearTarea.EXTRA_REPLY_P);
-        String descripcion = intent.getStringExtra(CrearTarea.EXTRA_REPLY_D);
+        String nombre = intent.getStringExtra(EXTRA_REPLY_N);
+
 
         taskHelper = new TaskDatabaseHelper(this);
         TaskList = (ListView) findViewById(R.id.list_todo);
@@ -58,7 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void crearTarea() {
         Intent intent = getIntent();
-        String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY_N);
+        String nombre = intent.getStringExtra(EXTRA_REPLY_N);
+        String coste = intent.getStringExtra(CrearTarea.EXTRA_REPLY_C);
+        String fecha = intent.getStringExtra(CrearTarea.EXTRA_REPLY_F);
+        String prioridad = intent.getStringExtra(CrearTarea.EXTRA_REPLY_P);
+        String descripcion = intent.getStringExtra(CrearTarea.EXTRA_REPLY_D);
+
+        Tarea tarea = new Tarea(nombre,coste,fecha,prioridad,descripcion);
 
         SQLiteDatabase db = taskHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -96,9 +100,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchInfo(View view) {
         Intent intent = new Intent(this, InfoTareas.class);
+
+        String nombre = intent.getStringExtra(EXTRA_REPLY_N);
+        intent.putExtra(EXTRA_REPLY_N, nombre);
         startActivity(intent);
     }
-
     public void updateUI() {
         ArrayList<String> taskList = new ArrayList<>();
         SQLiteDatabase db = taskHelper.getReadableDatabase();
@@ -122,4 +128,5 @@ public class MainActivity extends AppCompatActivity {
         cursor.close();
         db.close();
     }
+
 }

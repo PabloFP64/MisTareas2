@@ -1,6 +1,6 @@
 package com.example.mistareas2;
 
-public class Tarea {
+public class Tarea{
 
     private String nombre;
     private String coste;
