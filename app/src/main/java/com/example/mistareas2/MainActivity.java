@@ -35,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent intent = getIntent();
-        String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY);
+        String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY_N);
+        String coste = intent.getStringExtra(CrearTarea.EXTRA_REPLY_C);
+        String fecha = intent.getStringExtra(CrearTarea.EXTRA_REPLY_F);
+        String prioridad = intent.getStringExtra(CrearTarea.EXTRA_REPLY_P);
+        String descripcion = intent.getStringExtra(CrearTarea.EXTRA_REPLY_D);
 
         taskHelper = new TaskDatabaseHelper(this);
         TaskList = (ListView) findViewById(R.id.list_todo);
@@ -43,12 +47,18 @@ public class MainActivity extends AppCompatActivity {
         if(nombre!=null){
             crearTarea();
         }
+        updateUI();
+
+    }
+
+    @Override
+    public void onBackPressed(){
 
     }
 
     private void crearTarea() {
         Intent intent = getIntent();
-        String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY);
+        String nombre = intent.getStringExtra(CrearTarea.EXTRA_REPLY_N);
 
         SQLiteDatabase db = taskHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
