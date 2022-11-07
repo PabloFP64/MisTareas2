@@ -32,7 +32,7 @@
             android:autofillHints=""
             android:hint="@string/nombre"
             android:inputType="textLongMessage"
-            android:maxLength="12"
+            android:maxLength="17"
             tools:layout_editor_absoluteX="71dp"
             tools:layout_editor_absoluteY="84dp" />
 

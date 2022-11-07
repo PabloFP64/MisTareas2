@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical">
@@ -13,24 +14,30 @@
 
         android:textSize="20sp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/borrar_tarea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:adjustViewBounds="true"
         android:backgroundTint="#0D4853"
         android:onClick="deleteTask"
-        android:text="@string/borrar" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/download"
+        android:text="@string/borrar"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/info_tarea"
-        android:layout_width="wrap_content"
+        android:layout_width="51dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginEnd="57dp"
         android:layout_marginRight="98dp"
         android:backgroundTint="#0D4853"
         android:onClick="launchInfo"

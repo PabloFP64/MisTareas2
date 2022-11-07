@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         String fecha = intent.getStringExtra(CrearTarea.EXTRA_REPLY_F);
         String prioridad = intent.getStringExtra(CrearTarea.EXTRA_REPLY_P);
         String descripcion = intent.getStringExtra(CrearTarea.EXTRA_REPLY_D);
-
         Tarea tarea = new Tarea(nombre,coste,fecha,prioridad,descripcion);
+
 
         SQLiteDatabase db = taskHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
